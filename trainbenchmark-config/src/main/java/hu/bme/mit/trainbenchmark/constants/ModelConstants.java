@@ -12,14 +12,14 @@
 
 package hu.bme.mit.trainbenchmark.constants;
 
-import com.google.common.collect.ImmutableMap;
-
 import java.util.Map;
+
+import com.google.common.collect.ImmutableMap;
 
 public class ModelConstants {
 
 	public static final String ID = "id";
-
+	
 	// node types
 	public static final String REGION = "Region";
 	public static final String ROUTE = "Route";
@@ -51,5 +51,11 @@ public class ModelConstants {
 
 	// inheritance
 	public static final Map<String, String> SUPERTYPES = ImmutableMap.of(SEGMENT, TRACKELEMENT, SWITCH, TRACKELEMENT);
+	
+	// deployment
+	public static final String COMPUTING_MODULE = "ComputingModule";
+	public static final String COMPUTING_MODULE_EDGE = "computingModule";
+	public static final String ALLOCATION = "Allocation";
+	public static final String DOMAIN_ELEMENTS = "domainElements";
 
 }

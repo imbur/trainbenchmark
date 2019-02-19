@@ -20,7 +20,7 @@ public class SesameBenchmarkConfig extends RdfBenchmarkConfig {
 
 	protected SesameBenchmarkConfig(final BenchmarkConfigBase configBase, final boolean inferencing,
 									final RdfFormat format) {
-		super(configBase, inferencing, format);
+		super(null, false);
 	}
 
 	@Override

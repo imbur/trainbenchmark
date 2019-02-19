@@ -50,16 +50,16 @@ println()
 //reportUrl = "https://hooks.slack.com/services/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"
 
 def tools = [
-        new EmfApiBenchmarkConfigBuilder(),
-        new JenaBenchmarkConfigBuilder().setInferencing(false),
-        new JenaBenchmarkConfigBuilder().setInferencing(true),
-        new MySqlBenchmarkConfigBuilder(),
-        new Neo4jBenchmarkConfigBuilder().setEngine(Neo4jEngine.CORE_API).setGraphFormat(Neo4jGraphFormat.CSV    ),
-        new Neo4jBenchmarkConfigBuilder().setEngine(Neo4jEngine.CYPHER ).setGraphFormat(Neo4jGraphFormat.GRAPHML),
-        new SQLiteBenchmarkConfigBuilder(),
-        new TinkerGraphBenchmarkConfigBuilder(),
-        new ViatraBenchmarkConfigBuilder().setBackend(ViatraBackend.INCREMENTAL),
-        new ViatraBenchmarkConfigBuilder().setBackend(ViatraBackend.LOCAL_SEARCH),
+	new EmfApiBenchmarkConfigBuilder(),
+	new JenaBenchmarkConfigBuilder().setInferencing(false),
+	new JenaBenchmarkConfigBuilder().setInferencing(true),
+	new MySqlBenchmarkConfigBuilder(),
+	new Neo4jBenchmarkConfigBuilder().setEngine(Neo4jEngine.COREAPI).setGraphFormat(Neo4jGraphFormat.CSV    ),
+	new Neo4jBenchmarkConfigBuilder().setEngine(Neo4jEngine.CYPHER ).setGraphFormat(Neo4jGraphFormat.GRAPHML),
+	new SQLiteBenchmarkConfigBuilder(),
+	new TinkerGraphBenchmarkConfigBuilder(),
+	new ViatraBenchmarkConfigBuilder().setBackend(ViatraBackend.INCREMENTAL),
+	new ViatraBenchmarkConfigBuilder().setBackend(ViatraBackend.LOCAL_SEARCH),
 ]
 
 def workloads = [
@@ -122,12 +122,12 @@ def runBenchmarkSeries(BenchmarkConfigBaseBuilder configBaseBuilder, BenchmarkCo
 
 			def exitValue = BenchmarkRunner.runPerformanceBenchmark(config, ec)
 			if (exitValue != 0) {
-				println "Timeout or error occurred, skipping models for larger sizes. Error code: ${exitValue}"
+				println "Timeout or error occured, skipping models for larger sizes. Error code: ${exitValue}"
 				break
 			}
 		}
 	} catch (all) {
-		println "Exception occurred during execution."
+		println "Exception occured during execution."
 	}
 }
 
